@@ -86,9 +86,9 @@ function appendMessage(sender, text, className) {
 const updateUserCount = (totalUsers) => onlineUsers.innerText = totalUsers;
 
 // Events
-let userName = prompt("Enter your name to join Global Chat");
+let userName = prompt("ketik nama kamu untuk join Global Chat");
 if (userName) {
-    appendNotification('You joined', 'center');
+    appendNotification('kamu telah bergabung', 'center');
     socket.emit('new-user-joined', userName);
     onlineUsers.innerText = `${parseInt(onlineUsers.innerText) + 1}`;
 }
